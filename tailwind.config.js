@@ -5,13 +5,23 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class", // Enables class-based theming
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#1a202c",
+        secondary: "#2d3748",
+        light: {
+          background: "#ffffff",
+          text: "#000000",
+        },
+        dark: {
+          background: "#000000",
+          text: "#ffffff",
+        },
       },
     },
   },
+
   plugins: [],
 };
