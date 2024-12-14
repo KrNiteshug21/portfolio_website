@@ -42,7 +42,7 @@ const Navbar = () => {
     <nav className="top-4 sticky px-4">
       <div className="mx-auto sm:max-w-screen-sm md:max-w-screen-md">
         <div className="flex justify-between items-center border-2 dark:border-white backdrop-blur-md border-black rounded-full">
-          <div className="bg-dark-background dark:bg-light-background px-6 py-2 rounded-full text-white text-xl dark:text-black">
+          <div className="bg-dark-background dark:bg-light-background px-6 py-1 rounded-full text-2xl text-white dark:text-black">
             <Link
               className="hover:dark:text-black/70 hover:text-white/90"
               href="/"
