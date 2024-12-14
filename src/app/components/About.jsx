@@ -5,8 +5,8 @@ import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
 
 const About = () => {
   return (
-    <section className="mx-auto px-4 max-w-screen-lg min-h-screen text-primary dark:text-white">
-      <div className="flex flex-wrap md:flex-nowrap items-center gap-4">
+    <section className="mx-auto px-4 max-w-screen-lg min-h-screen text-primary dark:text-dark-text">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-6">
         <div className="mx-auto md:w-1/3">
           <Image
             src={"/img/Photo.jpeg"}
@@ -16,10 +16,10 @@ const About = () => {
             className="rounded-md"
           />
         </div>
-        <div className="space-y-4 md:w-2/3">
-          <h2 className="mt-4 font-bold text-6xl">Hey, I'm Nitesh</h2>
-          <p className="mt-4 text-justify text-lg leading-8 tracking-wider">
-            I am a <b>Full-Stack Developer</b> with a kanck for building and
+        <div className="flex flex-col gap-4 md:w-2/3">
+          <h2 className="font-bold text-6xl">Hey, I'm Nitesh</h2>
+          <p className="text-justify text-lg leading-6 tracking-wider">
+            I am a <b>Full-Stack Developer</b> with a knack for building and
             developing web applications. I have a strong passion for learning
             new technologies and building applications that solve real-world
             problems. I have experience in building web applications using
@@ -33,7 +33,7 @@ const About = () => {
               <IoLogoGithub size={36} />
             </Link>
             <Link
-              className="bg-white rounded"
+              className="bg-dark-text rounded"
               target="_blank"
               href="https://www.linkedin.com/in/nitesh-kumar-021947242/"
             >
@@ -41,6 +41,23 @@ const About = () => {
             </Link>
             <Link target="_blank" href="mailto:niteshkr8953@gmail.com">
               <IoMail size={36} />
+            </Link>
+          </div>
+          <div className="flex items-center gap-4 mt-4">
+            <Link
+              href={"/"}
+              className="bg-[#0072b1] px-4 py-2 rounded-md text-dark-text"
+            >
+              Contact me
+            </Link>
+            <Link
+              href="./NiteshKumar_Resume.pdf"
+              alt="resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#0072b1] px-4 py-2 rounded-md text-dark-text"
+            >
+              Download My resume
             </Link>
           </div>
         </div>

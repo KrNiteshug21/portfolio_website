@@ -9,7 +9,7 @@ const skillImages = {
     { title: "React", src: "/img/React-icon.svg" },
     { title: "Next.js", src: "/img/next-js.svg" },
     { title: "Tailwind CSS", src: "/img/tailwind.svg" },
-    { title: "Frame motion", src: "/img/framer-motion.svg" },
+    { title: "Framer motion", src: "/img/framer-motion.svg" },
   ],
   backend: [
     { title: "Node.js", src: "/img/nodejs.svg" },
@@ -22,18 +22,21 @@ const skillImages = {
 
 const Skills = () => {
   return (
-    <section className="mx-auto px-4 max-w-screen-lg text-primary dark:text-white">
+    <section
+      id="skills"
+      className="mx-auto px-2 max-w-screen-lg min-h-screen text-primary dark:text-dark-text"
+    >
       <div>
         <h2 className="mb-8 font-bold text-4xl text-center underline">
           Skills
         </h2>
         <div className="place-content-center space-y-8 grid">
-          <div>
-            <h3 className="font-bold text-2xl">Frontend</h3>
-            <div className="flex items-center gap-4">
+          <div className="space-y-4">
+            <h3 className="font-bold text-2xl text-center">Frontend</h3>
+            <div className="flex flex-wrap justify-center items-center gap-4">
               {skillImages.frontend.map((skill, index) => (
                 <div
-                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-4 rounded-md w-36 h-40 text-center text-white dark:text-black"
+                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
                   key={index}
                 >
                   <Image
@@ -48,12 +51,12 @@ const Skills = () => {
               ))}
             </div>
           </div>
-          <div>
-            <h3 className="font-bold text-2xl">Backend</h3>
-            <div className="flex items-center gap-4">
+          <div className="space-y-4">
+            <h3 className="font-bold text-2xl text-center">Backend</h3>
+            <div className="flex flex-wrap justify-center items-center gap-4">
               {skillImages.backend.map((skill, index) => (
                 <div
-                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-4 rounded-md w-36 h-40 text-center text-white dark:text-black"
+                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
                   key={index}
                 >
                   <Image

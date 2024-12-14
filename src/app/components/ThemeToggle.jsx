@@ -12,7 +12,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button className="text-black dark:text-white hover:underline">
+    <button className="text-black dark:text-dark-text hover:underline">
       {theme === "light" ? (
         <CiDark size={24} onClick={toggleTheme} />
       ) : (
