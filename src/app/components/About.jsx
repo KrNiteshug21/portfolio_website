@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
+import SectionWrapper from "../wrapper/SectionWrapper";
 
 const About = () => {
   return (
-    <section className="mx-auto px-4 max-w-screen-lg min-h-screen text-primary dark:text-dark-text">
+    <SectionWrapper>
       <div className="flex flex-wrap md:flex-nowrap items-center gap-6">
         <div className="mx-auto md:w-1/3">
           <Image
@@ -45,7 +46,7 @@ const About = () => {
           </div>
           <div className="flex items-center gap-4 mt-4">
             <Link
-              href={"/"}
+              href={"/#contact"}
               className="bg-[#0072b1] px-4 py-2 rounded-md text-dark-text"
             >
               Contact me
@@ -62,7 +63,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

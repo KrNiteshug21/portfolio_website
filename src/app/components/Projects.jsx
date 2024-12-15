@@ -1,17 +1,13 @@
 import React from "react";
+import SectionWrapper from "../wrapper/SectionWrapper";
 import ProjectCard from "./ProjectCard";
 import { travelBuddy, moviedise, phoneShop } from "../data/Data";
 
-const Projects = () => {
+const Projects = async () => {
   return (
-    <section
-      id="projects"
-      className="mx-auto px-4 min-h-screen text-primary dark:text-dark-text"
-    >
+    <SectionWrapper id="projects">
       <div>
-        <h2 className="mb-8 font-bold text-4xl text-center underline">
-          Projects
-        </h2>
+        <h2 className="mb-8 font-bold text-4xl underline">Projects</h2>
 
         <div className="flex flex-wrap justify-center gap-4">
           <ProjectCard data={travelBuddy} />
@@ -19,7 +15,7 @@ const Projects = () => {
           <ProjectCard data={phoneShop} />
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

@@ -21,7 +21,9 @@ const ProjectCard = ({ data }) => {
         <p className="font-thin text-base text-justify dark:text-gray-400">
           {data.description}
         </p>
-        <p>TechSTack: {data.techStack}</p>
+        <p>
+          <b>TechSTack:</b> {data.techStack}
+        </p>
         <div className="flex items-center gap-4">
           <Link target="_blank" href={data.github}>
             <IoCodeSlash size={28} />

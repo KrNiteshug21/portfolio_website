@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import SectionWrapper from "../wrapper/SectionWrapper";
 const skillImages = {
   frontend: [
     { title: "HTML", src: "/img/HTML5_Badge.svg" },
@@ -22,18 +23,13 @@ const skillImages = {
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="mx-auto px-2 max-w-screen-lg min-h-screen text-primary dark:text-dark-text"
-    >
+    <SectionWrapper id="skills">
       <div>
-        <h2 className="mb-8 font-bold text-4xl text-center underline">
-          Skills
-        </h2>
-        <div className="place-content-center space-y-8 grid">
+        <h2 className="mb-8 font-bold text-4xl underline">Skills</h2>
+        <div className="space-y-8">
           <div className="space-y-4">
-            <h3 className="font-bold text-2xl text-center">Frontend</h3>
-            <div className="flex flex-wrap justify-center items-center gap-4">
+            <h3 className="font-bold text-2xl">Frontend</h3>
+            <div className="flex flex-wrap items-center gap-4">
               {skillImages.frontend.map((skill, index) => (
                 <div
                   className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
@@ -52,8 +48,8 @@ const Skills = () => {
             </div>
           </div>
           <div className="space-y-4">
-            <h3 className="font-bold text-2xl text-center">Backend</h3>
-            <div className="flex flex-wrap justify-center items-center gap-4">
+            <h3 className="font-bold text-2xl">Backend</h3>
+            <div className="flex flex-wrap items-center gap-4">
               {skillImages.backend.map((skill, index) => (
                 <div
                   className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
@@ -73,7 +69,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

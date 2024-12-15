@@ -10,7 +10,6 @@ const navObj = [
   { name: "Skills", link: "/#skills" },
   { name: "Projects", link: "/#projects" },
   { name: "Education", link: "/#education" },
-  { name: "Achievement", link: "/#achievement" },
   { name: "Contact", link: "/#contact" },
 ];
 
