@@ -13,24 +13,18 @@ const navObj = [
   { name: "Contact", link: "/#contact" },
 ];
 
-const NavItems = () => {
+const NavItems = ({ item }) => {
+  const [hoverArrow, setHoverArrow] = useState(false);
   return (
-    <>
-      {navObj.map((item) => {
-        const [hoverArrow, setHoverArrow] = useState(false);
-        return (
-          <Link
-            className="flex items-center gap-4 hover:underline"
-            onMouseEnter={() => setHoverArrow(true)}
-            onMouseLeave={() => setHoverArrow(false)}
-            key={item.name}
-            href={item.link}
-          >
-            {item.name} {hoverArrow && <FaArrowRight />}
-          </Link>
-        );
-      })}
-    </>
+    <Link
+      className="flex items-center gap-4 hover:underline"
+      onMouseEnter={() => setHoverArrow(true)}
+      onMouseLeave={() => setHoverArrow(false)}
+      key={item.name}
+      href={item.link}
+    >
+      {item.name} {hoverArrow && <FaArrowRight />}
+    </Link>
   );
 };
 
@@ -67,7 +61,9 @@ const Navbar = () => {
                     size={24}
                     onClick={() => setIsMenuOpen(false)}
                   />
-                  <NavItems />
+                  {navObj.map((item) => (
+                    <NavItems key={item.name} item={item} />
+                  ))}
                 </div>
               </div>
             )}

@@ -19,7 +19,7 @@ const Education = () => {
             </div>
             <div className="text-gray-500 text-lg dark:text-dark-text leading-8">
               <h3 className="font-bold text-3xl text-primary dark:text-dark-text">
-                Bachelor's of Technology
+                Bachelor&apos;s of Technology
               </h3>
               <p>Computer Science and Engineering</p>
               <p className="">National Institute Of Technology Patna</p>
@@ -62,7 +62,7 @@ const Education = () => {
                 Matriculation
               </h3>
               <p>Physics, Chemistry and Math</p>
-              <p className="">St. Jude's School</p>
+              <p className="">St. Jude&apos;s School</p>
               <p className="">2015 - 2019</p>
               <p>Status: Completed</p>
             </div>

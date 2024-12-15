@@ -18,7 +18,7 @@ const About = () => {
           />
         </div>
         <div className="flex flex-col gap-4 md:w-2/3">
-          <h2 className="font-bold text-6xl">Hey, I'm Nitesh</h2>
+          <h2 className="font-bold text-6xl">Hey, I&apos;m Nitesh</h2>
           <p className="text-justify text-lg leading-6 tracking-wider">
             I am a <b>Full-Stack Developer</b> with a knack for building and
             developing web applications. I have a strong passion for learning
