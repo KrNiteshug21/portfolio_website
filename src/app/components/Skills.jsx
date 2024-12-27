@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import SectionWrapper from "../wrapper/SectionWrapper";
+import SkillCard from "./SkillCard";
+import { TextRevealAnimation } from "@/Anim/TextRevealAnimation";
 const skillImages = {
   frontend: [
     { title: "HTML", src: "/img/HTML5_Badge.svg" },
@@ -25,25 +26,15 @@ const Skills = () => {
   return (
     <SectionWrapper id="skills">
       <div>
-        <h2 className="mb-8 font-bold text-4xl underline">Skills</h2>
+        <h2 className="mb-8 font-bold text-4xl underline">
+          <TextRevealAnimation text={"Skills"} />
+        </h2>
         <div className="space-y-8">
           <div className="space-y-4">
             <h3 className="font-bold text-2xl">Frontend</h3>
             <div className="flex flex-wrap items-center gap-4">
               {skillImages.frontend.map((skill, index) => (
-                <div
-                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
-                  key={index}
-                >
-                  <Image
-                    src={skill.src}
-                    alt={skill.title}
-                    width={64}
-                    height={64}
-                    className="mx-auto w-16 h-16"
-                  />
-                  <p className="font-semibold text-lg">{skill.title}</p>
-                </div>
+                <SkillCard skill={skill} key={index} />
               ))}
             </div>
           </div>
@@ -51,19 +42,7 @@ const Skills = () => {
             <h3 className="font-bold text-2xl">Backend</h3>
             <div className="flex flex-wrap items-center gap-4">
               {skillImages.backend.map((skill, index) => (
-                <div
-                  className="space-y-4 bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black"
-                  key={index}
-                >
-                  <Image
-                    src={skill.src}
-                    alt={skill.title}
-                    width={64}
-                    height={64}
-                    className="mx-auto w-16 h-16"
-                  />
-                  <p className="font-semibold text-lg">{skill.title}</p>
-                </div>
+                <SkillCard skill={skill} key={index} />
               ))}
             </div>
           </div>

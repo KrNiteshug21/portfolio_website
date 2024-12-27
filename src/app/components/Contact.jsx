@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Phone, Mail } from "lucide-react";
 import SectionWrapper from "../wrapper/SectionWrapper";
 import SuccessModal from "./SuccessModal";
+import ButtonAnimation from "@/Anim/ButtonAnimation";
+import { TextRevealAnimation } from "@/Anim/TextRevealAnimation";
 
 const initContactObj = {
   email: "",
@@ -45,7 +47,9 @@ const Contact = () => {
       )}
       <SectionWrapper id="contact">
         <div className="">
-          <h2 className="mb-8 font-bold text-4xl underline">Contact me</h2>
+          <h2 className="mb-8 font-bold text-4xl underline">
+            <TextRevealAnimation text={"Contact Me"} />
+          </h2>
           <div className="flex flex-wrap sm:flex-nowrap items-start gap-8">
             <div className="flex-1">
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -73,12 +77,12 @@ const Contact = () => {
                   placeholder="Enter your message or query..."
                   className="border-2 border-gray-500 dark:border-white/80 dark:bg-slate-100 p-2 rounded-lg outline-none"
                 />
-                <button
-                  type="submit"
+                <ButtonAnimation
                   className="bg-blue-600 hover:bg-blue-900 px-4 py-2 rounded-lg w-max text-white"
+                  type="submit"
                 >
                   Submit
-                </button>
+                </ButtonAnimation>
               </form>
             </div>
 

@@ -1,72 +1,74 @@
 import React from "react";
 import SectionWrapper from "../wrapper/SectionWrapper";
 import Image from "next/image";
+import { TextRevealAnimation } from "@/Anim/TextRevealAnimation";
+
+const educationData = [
+  {
+    logo: "/img/edu/nitp-logo.jpg",
+    eduType: "Bachelor's of Technology",
+    course: "Computer Science and Engineering",
+    institution: "National Institute Of Technology Patna",
+    duration: "2021-25",
+    status: "Currently pursuing",
+  },
+  {
+    logo: "/img/edu/oxford-logo.jpg",
+    eduType: "Higher Secondary School",
+    course: "Physics, Chemistry and Math",
+    institution: "Oxford Public School",
+    duration: "2019-21",
+    status: "Completed",
+  },
+  {
+    logo: "/img/edu/jude-logo2.jpg",
+    eduType: "Matriculation",
+    course: "Physics, Chemistry and Math",
+    institution: "St. Jude's School",
+    duration: "2015-19",
+    status: "Completed",
+  },
+];
+
+const EducationItem = ({ edu }) => {
+  return (
+    <div
+      key={edu.institution}
+      className="flex sm:flex-row flex-col flex-auto sm:flex-none sm:items-center gap-4"
+    >
+      <div className="rounded-md overflow-hidden">
+        <Image
+          src={edu.logo}
+          width={300}
+          height={300}
+          alt={edu.institution}
+          className=""
+        />
+      </div>
+      <div className="w-[300px] sm:w-full text-gray-500 text-lg dark:text-dark-text leading-8">
+        <h3 className="font-bold text-3xl text-primary dark:text-dark-text">
+          {edu.eduType}
+        </h3>
+        <p>{edu.course}</p>
+        <p className="">{edu.institution}</p>
+        <p className="">{edu.duration}</p>
+        <p>Status: {edu.status}</p>
+      </div>
+    </div>
+  );
+};
 
 const Education = () => {
   return (
     <SectionWrapper id="education">
       <div>
-        <h2 className="mb-8 font-bold text-4xl underline">Education</h2>
+        <h2 className="mb-8 font-bold text-4xl underline">
+          <TextRevealAnimation text={"Education"} />
+        </h2>
         <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="rounded-md overflow-hidden">
-              <Image
-                src="/img/edu/nitp-logo.jpg"
-                width={200}
-                height={200}
-                alt="NIT Patna"
-              />
-            </div>
-            <div className="text-gray-500 text-lg dark:text-dark-text leading-8">
-              <h3 className="font-bold text-3xl text-primary dark:text-dark-text">
-                Bachelor&apos;s of Technology
-              </h3>
-              <p>Computer Science and Engineering</p>
-              <p className="">National Institute Of Technology Patna</p>
-              <p className="">2021 - 2025</p>
-              <p>Status: Currently pursuing</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="rounded-md overflow-hidden">
-              <Image
-                src="/img/edu/oxford-logo.jpg"
-                width={200}
-                height={200}
-                alt="Oxford Public School"
-              />
-            </div>
-            <div className="text-gray-500 text-lg dark:text-dark-text leading-8">
-              <h3 className="font-bold text-3xl text-primary dark:text-dark-text">
-                Higher Secondary School
-              </h3>
-              <p>Physics, Chemistry and Math</p>
-              <p className="">Oxford Public School</p>
-              <p className="">2019 - 2021</p>
-              <p>Status: Completed</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="rounded-md overflow-hidden">
-              <Image
-                src="/img/edu/jude-logo2.jpg"
-                width={200}
-                height={200}
-                alt="Oxford Public School"
-              />
-            </div>
-            <div className="text-gray-500 text-lg dark:text-dark-text leading-8">
-              <h3 className="font-bold text-3xl text-primary dark:text-dark-text">
-                Matriculation
-              </h3>
-              <p>Physics, Chemistry and Math</p>
-              <p className="">St. Jude&apos;s School</p>
-              <p className="">2015 - 2019</p>
-              <p>Status: Completed</p>
-            </div>
-          </div>
+          {educationData.map((edu) => (
+            <EducationItem key={edu.institution} edu={edu} />
+          ))}
         </div>
       </div>
     </SectionWrapper>

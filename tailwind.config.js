@@ -20,6 +20,9 @@ module.exports = {
           text: "#ffffff",
         },
       },
+      borderRadius: {
+        blob: "76% 24% 45% 55% / 27% 38% 62% 73%  ",
+      },
     },
   },
 

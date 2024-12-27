@@ -1,11 +1,12 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
 const ButtonAnimation = ({
   type = "button",
-  text,
-  clickFunction = null,
-  className = null,
+  children,
+  clickFunction = () => {},
+  className = "",
   disabled = false,
 }) => {
   return (
@@ -18,7 +19,7 @@ const ButtonAnimation = ({
       className={className}
       disabled={disabled}
     >
-      {text}
+      {children}
     </motion.button>
   );
 };

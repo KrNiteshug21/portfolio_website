@@ -5,6 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
+import ButtonAnimation from "@/Anim/ButtonAnimation";
 
 const navObj = [
   { name: "Skills", link: "/#skills" },
@@ -71,12 +72,10 @@ const Navbar = () => {
 
           <div className="sm:flex sm:items-center sm:gap-4 hidden px-4 text-lg">
             {navObj.map((item) => (
-              <Link
-                className="hover:underline"
-                key={item.name}
-                href={item.link}
-              >
-                {item.name}
+              <Link key={item.name} href={item.link}>
+                <ButtonAnimation className="hover:bg-gray-300 hover:dark:bg-secondary/50 px-2 py-1 rounded-md">
+                  {item.name}
+                </ButtonAnimation>
               </Link>
             ))}
             <ThemeToggle />

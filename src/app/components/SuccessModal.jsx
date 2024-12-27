@@ -12,10 +12,11 @@ const SuccessModal = ({ modalObj, clickFunction }) => {
           <p className="text-center text-lg text-slate-600">{modalObj.msg}</p>
           <ButtonAnimation
             type="button"
-            text={"Ok"}
             clickFunction={clickFunction}
             className="text-right bg-blue-600 hover:bg-blue-900 mt-4 px-4 py-2 rounded-lg text-white"
-          />
+          >
+            Ok
+          </ButtonAnimation>
         </div>
       </div>
     </section>
