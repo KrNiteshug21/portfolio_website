@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./wrapper/ThemeProvider";
+import ChatbotEmbed from "./wrapper/ChatbotEmbed";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-light-background dark:bg-primary text-primary dark:text-dark-text antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-light-background dark:bg-primary text-primary dark:text-dark-text overflow-x-hidden antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         >
           <Navbar />
           {children}
+          <ChatbotEmbed />
         </ThemeProvider>
       </body>
     </html>

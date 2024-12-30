@@ -33,7 +33,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="top-4 sticky px-4">
+    <nav className="top-4 z-10 sticky px-4">
       <div className="mx-auto sm:max-w-screen-sm md:max-w-screen-md">
         <div className="flex justify-between items-center border-2 border-primary dark:border-dark-text backdrop-blur-md rounded-full">
           <div className="bg-primary dark:bg-light-background px-6 py-1 rounded-full text-2xl text-dark-text dark:text-primary">

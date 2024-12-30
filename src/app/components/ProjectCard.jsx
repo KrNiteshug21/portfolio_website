@@ -26,7 +26,7 @@ const ProjectCard = ({ data }) => {
         <p>
           <b>TechSTack:</b> {data.techStack}
         </p>
-        <div className="flex justify-between items-center gap-4 w-full">
+        <div className="flex justify-between items-center gap-4 mt-auto w-full">
           <Link className="flex-auto" target="_blank" href={data.github}>
             <ButtonAnimation className="flex justify-center items-center gap-2 bg-blue-700 px-4 py-2 rounded-md w-full text-white text-xl">
               <span>Github</span>
