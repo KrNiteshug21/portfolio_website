@@ -8,10 +8,10 @@ import { FaArrowRight } from "react-icons/fa";
 import ButtonAnimation from "@/Anim/ButtonAnimation";
 
 const navObj = [
-  { name: "Skills", link: "/#skills" },
-  { name: "Projects", link: "/#projects" },
-  { name: "Education", link: "/#education" },
-  { name: "Contact", link: "/#contact" },
+  { name: "Skills", url: "/#skills" },
+  { name: "Projects", url: "/#projects" },
+  { name: "Education", url: "/#education" },
+  { name: "Contact", url: "/#contact" },
 ];
 
 const NavItems = ({ item }) => {
@@ -22,7 +22,7 @@ const NavItems = ({ item }) => {
       onMouseEnter={() => setHoverArrow(true)}
       onMouseLeave={() => setHoverArrow(false)}
       key={item.name}
-      href={item.link}
+      href={item.url}
     >
       {item.name} {hoverArrow && <FaArrowRight />}
     </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
           <div className="sm:flex sm:items-center sm:gap-4 hidden px-4 text-lg">
             {navObj.map((item) => (
-              <Link key={item.name} href={item.link}>
+              <Link key={item.name} href={item.url}>
                 <ButtonAnimation className="hover:bg-gray-300 hover:dark:bg-secondary/50 px-2 py-1 rounded-md">
                   {item.name}
                 </ButtonAnimation>

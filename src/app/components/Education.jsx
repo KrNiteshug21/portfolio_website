@@ -12,8 +12,8 @@ const Education = () => {
           <TextRevealAnimation text={"Education"} />
         </h2>
         <div className="space-y-4">
-          {EducationData.map((edu) => (
-            <EducationItem key={edu.institution} edu={edu} />
+          {EducationData.map((edu, index) => (
+            <EducationItem key={index} index={index} edu={edu} />
           ))}
         </div>
       </div>

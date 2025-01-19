@@ -7,6 +7,7 @@ import SectionWrapper from "../wrapper/SectionWrapper";
 import ButtonAnimation from "@/Anim/ButtonAnimation";
 import { motion, useInView } from "framer-motion";
 import { BackgroundBeamsWithCollision } from "./ui/Backgroun-Beam";
+import { AuroraBackground } from "./ui/Aurora-Background";
 
 const container = {
   hidden: (direction) => ({
@@ -28,18 +29,18 @@ const About = () => {
   const isInView = useInView(ref, { once: true, threshold: 0.5 });
 
   return (
-    <BackgroundBeamsWithCollision>
-      <SectionWrapper>
+    <AuroraBackground>
+      <SectionWrapper particle={false} id="about">
         <div
           ref={ref}
-          className="flex flex-wrap md:flex-nowrap md:justify-center items-center gap-6"
+          className="flex flex-wrap lg:flex-nowrap lg:justify-center items-center gap-6 mt-20 sm:mt-0"
         >
           <motion.div
             variants={container}
             custom={-1}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="mx-auto md:w-1/3"
+            className="mx-auto lg:w-1/3"
           >
             <Image
               src={"/img/Photo.jpeg"}
@@ -56,7 +57,7 @@ const About = () => {
             variants={container}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex flex-col gap-4 md:w-2/3"
+            className="flex flex-col gap-4 lg:w-2/3"
           >
             <h2 className="font-bold text-6xl">Hey, I&apos;m Nitesh</h2>
             <p className="text-justify text-lg leading-6 tracking-wider">
@@ -85,18 +86,19 @@ const About = () => {
               </Link>
             </div>
             <div className="flex sm:flex-row flex-col items-center gap-4 my-4">
-              <Link href={"/#contact"}>
-                <ButtonAnimation className="bg-blue-600 px-4 py-2 rounded-md text-dark-text text-lg">
+              <Link className="w-full" href={"/#contact"}>
+                <ButtonAnimation className="bg-blue-600 px-4 py-2 rounded-md w-full text-dark-text text-lg">
                   Contact Me
                 </ButtonAnimation>
               </Link>
               <Link
+                className="w-full"
                 download={true}
                 href="/docs/NiteshKumar_2106110.pdf"
                 alt="resume"
                 target="_blank"
               >
-                <ButtonAnimation className="bg-blue-600 px-4 py-2 rounded-md text-dark-text text-lg">
+                <ButtonAnimation className="bg-blue-600 px-4 py-2 rounded-md w-full text-dark-text text-lg">
                   Download my Resume
                 </ButtonAnimation>
               </Link>
@@ -104,7 +106,7 @@ const About = () => {
           </motion.div>
         </div>
       </SectionWrapper>
-    </BackgroundBeamsWithCollision>
+    </AuroraBackground>
   );
 };
 

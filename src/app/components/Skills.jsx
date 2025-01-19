@@ -4,10 +4,17 @@ import SectionWrapper from "../wrapper/SectionWrapper";
 import SkillCard from "./SkillCard";
 import { TextRevealAnimation } from "@/Anim/TextRevealAnimation";
 import SkillData from "../../data/SkillData";
+import { Particles } from "./ui/Particles";
 
 const Skills = () => {
   return (
     <SectionWrapper id="skills">
+      <Particles
+        className="absolute inset-0 w-full"
+        quantity={100}
+        ease={80}
+        refresh
+      />
       <div>
         <h2 className="mb-8 font-bold text-4xl underline">
           <TextRevealAnimation text={"Skills"} />
