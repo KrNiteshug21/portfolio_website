@@ -2,6 +2,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const animVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+};
+
 export const TextRevealAnimation = ({ text }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.5 });
@@ -12,9 +19,10 @@ export const TextRevealAnimation = ({ text }) => {
         return (
           <motion.span
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isInView ? 1 : 0 }}
-            transition={{ duration: 0.25, delay: index * 0.07 }}
+            variants={animVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: "0.25", delay: index * 0.07 }}
             key={index}
           >
             {char}

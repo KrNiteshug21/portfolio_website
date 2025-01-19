@@ -5,7 +5,7 @@ const SkillCard = ({ skill }) => {
   return (
     <CardAnimation
       triggerHoverAnimation={true}
-      className="flex-auto sm:flex-none place-content-center space-y-4 grid bg-primary/80 dark:bg-white shadow-xl p-2 rounded-md w-32 h-36 text-center text-dark-text dark:text-black cursor-pointer"
+      className="flex-auto sm:flex-none place-content-center space-y-4 grid bg-gray-200 dark:bg-gray-800 hover:shadow-md p-2 rounded-md w-32 h-36 text-center text-primary dark:text-white/90"
     >
       <Image
         src={skill.src}

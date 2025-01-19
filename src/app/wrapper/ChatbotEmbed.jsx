@@ -35,7 +35,7 @@ export default function ChatbotEmbed() {
   }
 
   return (
-    <section className="right-16 bottom-16 fixed w-96 h-[500px]">
+    <section className="right-2 sm:right-16 bottom-16 fixed my-2 sm:my-0 w-96 h-[500px]">
       <iframe
         src={`https://www.chatbase.co/chatbot-iframe/${chatbotId}`}
         className="rounded-lg w-full h-full"

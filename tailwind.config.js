@@ -8,6 +8,9 @@ module.exports = {
   darkMode: "class", // Enables class-based theming
   theme: {
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
       colors: {
         primary: "#1a202c",
         secondary: "#2d3748",

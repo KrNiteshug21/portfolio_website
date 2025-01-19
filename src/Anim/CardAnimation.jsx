@@ -3,6 +3,16 @@ import React from "react";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
+const cardVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+  hover: { translateY: "-3px", transition: { duration: "0.1" } },
+};
+
 const CardAnimation = ({
   children,
   className = "",
@@ -14,12 +24,10 @@ const CardAnimation = ({
   return (
     <motion.div
       ref={ref}
-      initial={{ scale: 0, opacity: 0 }}
-      animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      whileHover={
-        triggerHoverAnimation && { scale: 1.1, transition: { duration: 0.1 } }
-      }
+      variants={cardVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      whileHover={triggerHoverAnimation ? "hover" : ""}
       layout={true}
       className={className}
     >
